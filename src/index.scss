@@ -1,5 +1,6 @@
 :root {
   font: 16px / 1 sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 
 html {
@@ -9,4 +10,79 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-image: url(https://wallpapercave.com/wp/wp2895269.jpg);
+  background-size: cover;
+}
+h1 {
+  padding: 20px;
+  margin: 10px;
+  color: grey;
+  font-size: 3rem;
+}
+header {
+  height: 100px;
+}
+span.home {
+  // border: solid;
+  border-radius: 1rem;
+  font-size: 20px;
+  padding: 30px;
+  margin: 10px;
+}
+
+header {
+  border: thin solid;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ul {
+  border: thin solid;
+  border-radius: 3rem;
+  list-style: none;
+  padding: 70px;
+  text-align: center;
+  background-color: white;
+}
+li {
+  line-height: 2rem;
+}
+// div.section {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+h3 {
+  margin-top: 0;
+}
+form {
+  border: thin solid;
+  background-color: rgb(194, 221, 240);
+  border-radius: 2rem;
+  margin-top: 10px;
+  padding: 20px;
+}
+h4 {
+  margin-top: 5px;
+}
+button {
+  border: thin solid lightgrey;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: lightgrey;
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+a:hover {
+  color: green;
 }
