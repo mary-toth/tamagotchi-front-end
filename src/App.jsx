@@ -3,16 +3,26 @@ import { Link, Route, Switch } from 'react-router-dom'
 import axios from 'axios'
 
 export function App() {
-  const [pet, setPet] = useState({ names: [] })
-  const [name, setName] = useState()
+  const [pet, setPet] = useState({})
+  const [name, setName] = useState('')
 
-  // @ts-ignore
-  useEffect(async () => {
-    const response = await axios.get(
-      'https://tamagotchiapi.herokuapp.com/api/Pets'
-    )
-    setPet(response.data)
+  useEffect(function () {
+    async function loadThePets() {
+      const response = await axios.get(
+        'https://tamagotchiapi.herokuapp.com/api/Pets'
+      )
+      setPet(response.data)
+    }
+    loadThePets()
   }, [])
+
+  // useEffect(async () => {
+  //   const response = await axios.get(
+  //     'https://tamagotchiapi.herokuapp.com/api/Pets'
+  //   )
+  //   setPet(response.data)
+  // }, [])
+
   return (
     <>
       <style>
@@ -27,7 +37,7 @@ export function App() {
       </header>
       <nav>
         <ul>
-          {Object.entries(pet.names).map(([petCode, petDetails]) => {
+          {Object.entries(pet).map(([petCode, petDetails]) => {
             return <li key={petDetails.id}>{petDetails.name}</li>
           })}
 
