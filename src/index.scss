@@ -16,12 +16,10 @@ body {
 h1 {
   padding: 20px;
   margin: 10px;
-  color: grey;
+  color: rgb(100, 100, 100);
   font-size: 3rem;
 }
-header {
-  height: 100px;
-}
+
 span.home {
   // border: solid;
   border-radius: 1rem;
@@ -31,10 +29,11 @@ span.home {
 }
 
 header {
-  border: thin solid;
+  border: thin solid rgb(100, 100, 100);
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
+  height: 100px;
 }
 
 nav {
@@ -43,7 +42,7 @@ nav {
   justify-content: center;
 }
 ul {
-  border: thin solid;
+  border: thin solid rgb(100, 100, 100);
   border-radius: 3rem;
   list-style: none;
   padding: 70px;
@@ -60,10 +59,12 @@ li {
 
 h3 {
   margin-top: 0;
+  border-radius: 2rem;
+  padding: 10px;
+  background-color: rgb(194, 230, 255);
 }
 form {
-  border: thin solid;
-  background-color: rgb(194, 221, 240);
+  background-color: rgb(194, 230, 255);
   border-radius: 2rem;
   margin-top: 10px;
   padding: 20px;
@@ -72,7 +73,7 @@ h4 {
   margin-top: 5px;
 }
 button {
-  border: thin solid lightgrey;
+  border: thin solid rgb(155, 155, 155);
   border-radius: 2rem;
   cursor: pointer;
 }
@@ -84,5 +85,12 @@ a {
   color: rgb(0, 0, 0);
 }
 a:hover {
-  color: green;
+  // color: rgb(145, 179, 202);
+  background-color: rgb(194, 230, 255);
+  border-radius: 1rem;
+}
+input {
+  padding: 6px;
+  width: 200px;
+  margin: 10px;
 }
