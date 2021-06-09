@@ -1,7 +1,8 @@
 import React from 'react'
-import { Route, Switch, useHistory, useParams } from 'react-router-dom'
+import { Route, Switch, useHistory } from 'react-router-dom'
 import { Header } from './components/Header'
 import { ListOfPetsPage } from './ListOfPetsPage'
+import { PetInfoPage } from './PetInfoPage'
 
 export function App() {
   return (
@@ -12,7 +13,7 @@ export function App() {
           <ListOfPetsPage />
         </Route>
         <Route exact path="/Pets/:id">
-          <ListOfPetsPage />
+          <PetInfoPage />
         </Route>
         <Route exact path="/2">
           pg 2{' '}
