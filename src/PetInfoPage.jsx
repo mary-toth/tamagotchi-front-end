@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 
 export function PetInfoPage() {
   const [petInfo, setPetInfo] = useState({
@@ -11,6 +11,7 @@ export function PetInfoPage() {
   })
 
   const params = useParams()
+  const history = useHistory()
 
   useEffect(function () {
     async function loadPetInfo() {
@@ -22,6 +23,13 @@ export function PetInfoPage() {
     }
     loadPetInfo()
   }, [])
+
+  async function deletePet() {
+    const response = await axios.delete(
+      `https://tamagotchiapi.herokuapp.com/api/Pets/${params.id}`
+    )
+    history.push('/')
+  }
 
   return (
     <nav className="petinfo">
@@ -43,7 +51,9 @@ export function PetInfoPage() {
           <button className="interact">Play</button>
         </div>
         <div className="deletesection">
-          <button className="delete">Delete Pet</button>
+          <button className="delete" onClick={deletePet}>
+            Delete Pet
+          </button>
         </div>
       </ul>
     </nav>
