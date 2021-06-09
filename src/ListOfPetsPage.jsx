@@ -41,7 +41,7 @@ export function ListOfPetsPage() {
             )
           })}
           <form>
-            <h4>Create a New Pet</h4>
+            <div className="createPet">Create a New Pet</div>
             <label htmlFor="text1">Name </label>
             <input
               type="text"

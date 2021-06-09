@@ -15,41 +15,45 @@ body {
   background-image: url(https://wallpapercave.com/wp/wp2895269.jpg);
   background-size: cover;
 }
-// homepage
 
 h1 {
   padding: 20px;
   margin: 10px;
-  color: rgb(117, 117, 117);
   font-size: 3rem;
+  text-shadow: 2px 4px 5px rgb(88, 202, 255);
 }
 
-span.home {
+h2 {
   border-radius: 1rem;
+  color: rgb(117, 117, 117);
   font-size: 20px;
   padding: 30px;
   margin: 10px;
 }
 
+a.homeLink {
+  color: rgb(117, 117, 117);
+}
 header {
   border: thin solid rgb(100, 100, 100);
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   height: 100px;
+  color: rgb(117, 117, 117);
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 50px;
+  margin: 40px;
 }
 ul {
   border: thin solid rgb(100, 100, 100);
   border-radius: 3rem;
   list-style: none;
-  padding: 70px;
+  padding: 50px;
   text-align: center;
   background-color: white;
   min-width: 500px;
@@ -70,8 +74,8 @@ form {
   margin-top: 10px;
   padding: 20px;
 }
-h4 {
-  margin-top: 5px;
+div.createPet {
+  margin: 10px;
 }
 button.create {
   border: thin solid rgb(155, 155, 155);
@@ -90,7 +94,7 @@ a {
 }
 a:hover {
   background-color: rgb(194, 230, 255);
-  border-radius: 1rem;
+  border-radius: 10px;
 }
 
 input {
@@ -101,10 +105,16 @@ input {
 
 //petinfopage
 
+p.petName {
+  font-size: 35px;
+  margin: 0;
+  text-shadow: 2px 6px 5px rgb(88, 202, 255);
+  color: rgb(95, 95, 95);
+}
+
 div.feedpetscold {
   background-color: rgb(194, 230, 255);
   border-radius: 2rem;
-  margin-top: 10px;
   padding: 20px;
 }
 button.interact {

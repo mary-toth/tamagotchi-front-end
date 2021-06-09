@@ -5,9 +5,11 @@ export function Header() {
   return (
     <header>
       <h1>tamagotchi</h1>
-      <span className="home">
-        <Link to="/">home</Link>
-      </span>
+      <h2>
+        <Link className="homeLink" to="/">
+          home
+        </Link>
+      </h2>
     </header>
   )
 }

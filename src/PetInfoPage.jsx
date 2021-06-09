@@ -26,7 +26,7 @@ export function PetInfoPage() {
   return (
     <nav className="petinfo">
       <ul>
-        <p>Name: {petInfo.name}</p>
+        <p className="petName">{petInfo.name}</p>
         <p>ID: {petInfo.id}</p>
         <p>
           Birthday:
