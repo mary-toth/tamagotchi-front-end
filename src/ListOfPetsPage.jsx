@@ -51,7 +51,9 @@ export function ListOfPetsPage() {
                 setName(event.target.value)
               }}
             ></input>
-            <button onClick={handleCreateAPet}>Create</button>
+            <button className="create" onClick={handleCreateAPet}>
+              Create
+            </button>
           </form>
         </ul>
       </nav>

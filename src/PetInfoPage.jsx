@@ -24,17 +24,28 @@ export function PetInfoPage() {
   }, [])
 
   return (
-    <div>
-      <p>{petInfo.id}</p>
-      <p>{petInfo.name}</p>
-      <p>
-        {
-          // @ts-ignore
-          petInfo.birthday
-        }
-      </p>
-      <p>{petInfo.hungerLevel}</p>
-      <p>{petInfo.happinessLevel}</p>
-    </div>
+    <nav className="petinfo">
+      <ul>
+        <p>Name: {petInfo.name}</p>
+        <p>ID: {petInfo.id}</p>
+        <p>
+          Birthday:
+          {
+            // @ts-ignore
+            petInfo.birthday
+          }
+        </p>
+        <p>Hunger: {petInfo.hungerLevel}</p>
+        <p>Happiness: {petInfo.happinessLevel}</p>
+        <div className="feedpetscold">
+          <button className="interact">Feed</button>
+          <button className="interact">Scold</button>
+          <button className="interact">Play</button>
+        </div>
+        <div className="deletesection">
+          <button className="delete">Delete Pet</button>
+        </div>
+      </ul>
+    </nav>
   )
 }
