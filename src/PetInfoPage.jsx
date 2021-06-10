@@ -31,6 +31,34 @@ export function PetInfoPage() {
     history.push('/')
   }
 
+  async function petPlaytime() {
+    const response = await axios.post(
+      `https://tamagotchiapi.herokuapp.com/api/Pets/${params.id}/playtimes`
+    )
+    const refreshPets = await axios.get(
+      `https://tamagotchiapi.herokuapp.com/api/Pets/${params.id}`
+    )
+    setPetInfo(refreshPets.data)
+  }
+  async function petFeedings() {
+    const response = await axios.post(
+      `https://tamagotchiapi.herokuapp.com/api/Pets/${params.id}/feedings`
+    )
+    const refreshPets = await axios.get(
+      `https://tamagotchiapi.herokuapp.com/api/Pets/${params.id}`
+    )
+    setPetInfo(refreshPets.data)
+  }
+  async function petScold() {
+    const response = await axios.post(
+      `https://tamagotchiapi.herokuapp.com/api/Pets/${params.id}/scoldings`
+    )
+    const refreshPets = await axios.get(
+      `https://tamagotchiapi.herokuapp.com/api/Pets/${params.id}`
+    )
+    setPetInfo(refreshPets.data)
+  }
+
   return (
     <nav className="petinfo">
       <ul>
@@ -46,9 +74,15 @@ export function PetInfoPage() {
         <p>Hunger: {petInfo.hungerLevel}</p>
         <p>Happiness: {petInfo.happinessLevel}</p>
         <div className="feedpetscold">
-          <button className="interact">Feed</button>
-          <button className="interact">Scold</button>
-          <button className="interact">Play</button>
+          <button className="interact" onClick={petFeedings}>
+            Feed
+          </button>
+          <button className="interact" onClick={petScold}>
+            Scold
+          </button>
+          <button className="interact" onClick={petPlaytime}>
+            Play
+          </button>
         </div>
         <div className="deletesection">
           <button className="delete" onClick={deletePet}>
