@@ -32,6 +32,7 @@ export function ListOfPetsPage() {
     <>
       <nav>
         <ul>
+          <p className="selectPet"> Select a Pet</p>
           {Object.entries(pet).map(([petCode, petDetails]) => {
             return (
               <li key={petDetails.id}>
