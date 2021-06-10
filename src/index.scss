@@ -20,7 +20,8 @@ h1 {
   padding: 20px;
   margin: 10px;
   font-size: 3rem;
-  text-shadow: 2px 4px 5px rgb(88, 202, 255);
+  // text-shadow: 2px 6px 5px rgb(105, 154, 173);
+  text-shadow: 2px 6px 5px rgb(163, 221, 245);
 }
 
 h2 {
@@ -35,7 +36,8 @@ a.homeLink {
   color: rgb(117, 117, 117);
 }
 header {
-  border: thin solid rgb(100, 100, 100);
+  // border: thin solid rgb(172, 172, 172);
+  box-shadow: 5px 5px 30px 2px rgb(115, 181, 219);
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
@@ -47,16 +49,16 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 40px;
+  margin: 20px;
 }
 ul {
-  border: thin solid rgb(100, 100, 100);
+  // border: thin solid rgb(172, 172, 172);
   border-radius: 3rem;
   list-style: none;
   padding: 50px;
   text-align: center;
   background-color: white;
-  min-width: 500px;
+  box-shadow: 5px 5px 30px 2px rgb(115, 181, 219);
 }
 li {
   line-height: 2rem;
@@ -73,12 +75,16 @@ form {
   border-radius: 2rem;
   margin-top: 10px;
   padding: 20px;
+  color: rgb(80, 80, 80);
 }
+
 div.createPet {
   margin: 10px;
 }
 button.create {
-  border: thin solid rgb(155, 155, 155);
+  border: none;
+  box-shadow: 5px 5px 14px 0px rgb(115, 181, 219);
+
   border-radius: 2rem;
   cursor: pointer;
   font-family: 'Mulish', sans-serif;
@@ -90,17 +96,20 @@ button.create {
 
 a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(80, 80, 80);
 }
 a:hover {
   background-color: rgb(194, 230, 255);
   border-radius: 10px;
+  font-size: 20px;
 }
 
 input {
   padding: 6px;
   width: 200px;
   margin: 10px;
+  color: rgb(80, 80, 80);
+  border: none;
 }
 
 //petinfopage
@@ -108,17 +117,17 @@ input {
 p.petName {
   font-size: 35px;
   margin: 0;
-  text-shadow: 2px 6px 5px rgb(88, 202, 255);
+  text-shadow: 2px 6px 5px rgb(163, 221, 245);
   color: rgb(95, 95, 95);
 }
 
 div.feedpetscold {
-  background-color: rgb(194, 230, 255);
+  // background-color: rgb(194, 230, 255);
   border-radius: 2rem;
   padding: 20px;
 }
 button.interact {
-  border: thin solid rgb(155, 155, 155);
+  border: none;
   border-radius: 2rem;
   cursor: pointer;
   font-family: 'Mulish', sans-serif;
@@ -127,21 +136,40 @@ button.interact {
   background-color: rgb(80, 170, 223);
   color: white;
   font-size: 18px;
+  box-shadow: 5px 5px 14px 0px rgb(115, 181, 219);
 }
 button.delete {
-  border: thin solid rgb(155, 155, 155);
+  border: none;
   background-color: rgb(80, 170, 223);
   color: white;
   border-radius: 2rem;
   cursor: pointer;
   font-family: 'Mulish', sans-serif;
   padding: 5px 10px;
-  margin: 20px 1px -10px 15px;
+  margin: 5px 1px -10px 15px;
 }
 
 .delete:hover,
 .interact:hover,
 .create:hover {
-  background-color: rgb(179, 195, 202);
-  color: black;
+  background-color: rgb(175, 219, 238);
+  border: none;
+}
+
+p {
+  color: rgb(80, 80, 80);
+}
+// @media all and (max-width: 500px) {
+//   ul {
+//     width: 300px;
+//   }
+// }
+@media all and (max-width: 45px) {
+  label {
+    font-size: 10px;
+    color: rgb(194, 230, 255);
+  }
+  div.createPet {
+    margin-bottom: 0;
+  }
 }
