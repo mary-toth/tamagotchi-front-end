@@ -36,6 +36,7 @@ a.homeLink {
 }
 header {
   box-shadow: 5px 5px 30px 2px rgb(115, 181, 219);
+
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
@@ -166,6 +167,18 @@ p {
   color: rgb(80, 80, 80);
 }
 
+footer {
+  color: rgb(117, 117, 117);
+  opacity: 80%;
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100;
+  text-align: center;
+}
 @media all and (max-width: 45px) {
   label {
     font-size: 10px;

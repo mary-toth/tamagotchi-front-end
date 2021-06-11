@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
-import { Header } from './components/Header'
+import { Header } from './components/HeaderFooter'
 import { ListOfPetsPage } from './ListOfPetsPage'
 import { PetInfoPage } from './PetInfoPage'
 
