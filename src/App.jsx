@@ -1,14 +1,14 @@
 import axios from 'axios'
 import React from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
-import { Header } from './components/HeaderFooter'
+import { HeaderFooter } from './components/HeaderFooter'
 import { ListOfPetsPage } from './ListOfPetsPage'
 import { PetInfoPage } from './PetInfoPage'
 
 export function App() {
   return (
     <>
-      <Header></Header>
+      <HeaderFooter></HeaderFooter>
       <Switch>
         <Route exact path="/">
           <ListOfPetsPage />
